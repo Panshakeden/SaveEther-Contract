@@ -69,7 +69,7 @@ describe("Save Ether", function () {
 
 
   describe("Withdraw", function () {
-    it("Check if decrement balance on withdraw", async function () {
+    it("Check withdraw", async function () {
       const { saveEther, owner } = await loadFixture(deploySaveEther);
       await saveEther.deposit({ value: 2 });
       await saveEther.withdraw();
@@ -83,8 +83,8 @@ describe("Save Ether", function () {
 
 
 
-  describe("send out saving", function () {
-    it("Check if transfer is successful", async function () {
+  describe("send saving", function () {
+    it("Check successful transfer", async function () {
       const { saveEther, owner } = await loadFixture(deploySaveEther);
       const checkAddress = "0x5B38Da6a701c568545dCfcB03FcB875f56beddC4";
       await saveEther.deposit({ value: 3 });
